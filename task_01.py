@@ -1,17 +1,32 @@
 """
-● Write a program that counts up the number of
-vowels [a, e, i, o,u] contained in the string.
+● Write a function that accepts two arguments (length, start) to
+generate an array of a specific length filled with integer numbers
+increased by one from start.
 """
 
-vowels = ['o', 'u', 'i', 'e', 'a']
-count = 0
-newString = input("Please enter the string: ").lower()
-for i in range(len(newString)):
-    for j in range(len(vowels)):
-        if newString[i] == vowels[j]:
-            count += 1
+def fillArray(length, start):
+    arr = []
+    i = 0
+    while i < length:
+        arr.append(start)
+        start += 1
+        i += 1
+    print(arr)
 
-if count == 0:
-    print("there is no vowels.")
-else:
-    print("the count of vowels is: " + str(count))
+length = input("Enter the length of the array: ")
+while True:
+    if length.isdigit():
+        length = int(length)
+        break
+    else:
+        length = input("Please enter Number..> ")
+
+start = input("Enter the start of the array: ")
+while True:
+    if start.isdigit():
+        start = int(start)
+        break
+    else:
+        start = input("Please enter Number..> ")
+
+fillArray(length, start)

@@ -1,4 +1,4 @@
-# Python-Lab-1
+# Python-Lab-2
 
 ## ITI DevOps
 
@@ -6,5 +6,11 @@
 
 Strings
 Lists
-Loop
+While Loop
+For Loop 
 If Condition
+Functions
+Tuple
+Dictionary
+Modules
+Package

@@ -1,24 +1,32 @@
 """
-Fill an array with 5 elements from the user, Sort it in descending
-and ascending orders then display the output.
+● write a function that takes a number as an argument and if the
+number divisible by 3 return "Fizz" and if it is divisible by 5 return
+"buzz" and if is divisible by both return "FizzBuzz"
 """
 
-elements = []
-for i in range(1, 6):
-    num = input("Please enter the element number " + str(i) + " :")
-    
-    if num.isdigit():
-        elements.append(int(num))
+
+def fizzbuzz(num):
+    if num % 3 == 0 and num % 5 == 0:
+        result = "FizzBuzz"
+        return result
+    elif num % 3 == 0:
+        result = "Fizz"
+        return result
+    elif num % 5 == 0:
+        result = "Buzz"
+        return result
     else:
-        print("it's not a digit, it can't added to the list")
+        result = "Not Divisible"
+        return result
 
-print("The Elements you entered: ")
-print(elements)
 
-print("The Elements you entered ascending order: ")
-elements.sort()
-print(elements)
+num = input("Enter the Number: ")
+while True:
+    if num.isdigit():
+        num = int(num)
+        break
+    else:
+        num = input("Please enter Number..> ")
 
-print("The Elements you entered descending order: ")
-elements.sort(reverse=True)
-print(elements)
+result = fizzbuzz(num)
+print(result)
